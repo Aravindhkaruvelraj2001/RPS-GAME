@@ -1,0 +1,60 @@
+body
+{
+	background-color:#e867f1;
+}
+#icon-container
+{
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+i
+{
+	font-size: 2rem;
+	color:#b022b9;
+}
+#rock-button:hover .fa-hand-rock
+{
+	cursor: pointer;
+	font-size: 2.5rem;
+}
+#paper-button:hover .fa-hand-paper
+{
+	cursor: pointer;
+	font-size: 2.5rem;
+}
+#scissor-button:hover .fa-hand-scissors
+{
+	cursor: pointer;
+	font-size: 2.5rem;
+}
+#result-container
+{
+	display:flex; 
+	justify-content: space-evenly;
+}
+.user
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.userresult
+{
+	display: flex;
+	flex-direction: column;
+}
+.botresult
+{
+	display: flex;
+	flex-direction: column;
+}
+.bot
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}

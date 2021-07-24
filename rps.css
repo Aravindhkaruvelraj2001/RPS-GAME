@@ -1,11 +1,45 @@
 body
 {
-	background-color:#e867f1;
+	background-color:#761137;
 }
+.wrapper
+{
+	display: flex;
+	flex-direction: column;
+}
+.profile
+{
+	background-color: #ED335F;
+	display: flex;
+	justify-content:space-around;
+
+}
+
+.fun
+{
+	width: 100%;
+	height: 400px;
+	display: flex;
+	background-image: url('rps.png');
+	background-repeat:;
+	background-size: auto;
+}
+.sub_fun1
+{
+	height: 400px;
+	width: 50%;
+}
+.sub_fun2
+{
+	height: 400px;
+	width: 50%;
+}
+
+
 #icon-container
 {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 5%;
 	margin-bottom: 5%;
@@ -14,7 +48,7 @@ body
 i
 {
 	font-size: 2rem;
-	color:#b022b9;
+	color:#761137;
 }
 #rock-button:hover .fa-hand-rock
 {
@@ -30,31 +64,4 @@ i
 {
 	cursor: pointer;
 	font-size: 2.5rem;
-}
-#result-container
-{
-	display:flex; 
-	justify-content: space-evenly;
-}
-.user
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-.userresult
-{
-	display: flex;
-	flex-direction: column;
-}
-.botresult
-{
-	display: flex;
-	flex-direction: column;
-}
-.bot
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }

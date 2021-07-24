@@ -6,13 +6,13 @@ let paperbutton=document.querySelector('#paper-button');
 
 let scissorbutton=document.querySelector('#scissor-button');
 
-let user=document.querySelector('.user');
+let user=document.querySelector('.user_image');
 
-let userresult=document.querySelector('.userresult');
+let userresult=document.querySelector('.user_score_span');
 
-let botresult=document.querySelector('.botresult');
+let botresult=document.querySelector('.bot_score_span');
 
-let bot=document.querySelector('.bot');
+let bot=document.querySelector('.bot_image');
 
 var userinput,userweapon,botinput,botweapon;
 
@@ -34,11 +34,7 @@ rockbutton.addEventListener('click',(e)=>{
 	botbalaji();
     userinput=document.querySelector('.fa-hand-rock');
     userweapon=document.querySelector('.fa-hand-paper');
-  	let newicon=document.createElement('i');
-  	newicon.classList.add('far');
-  	newicon.classList.add('fa-hand-rock');
-  	newicon.style.color='white';
-  	user.appendChild(newicon);
+	user.src='./rock.jpg'
   	result();
 
 });	
@@ -47,11 +43,7 @@ paperbutton.addEventListener('click',(e)=>{
 	botbalaji();
 	userinput=document.querySelector('.fa-hand-paper');
 	userweapon=document.querySelector('.fa-hand-scissors');
-  	let newicon=document.createElement('i');
-  	newicon.classList.add('far');
-  	newicon.classList.add('fa-hand-paper');
-  	newicon.style.color='white';
-  	user.appendChild(newicon);
+	user.src='./paper.jpg'
   	result();
 });	
 
@@ -60,11 +52,7 @@ scissorbutton.addEventListener('click',(e)=>{
 	botbalaji();
 	userinput=document.querySelector('.fa-hand-scissors')
 	userweapon=document.querySelector('.fa-hand-rock');
-  	let newicon=document.createElement('i');
-  	newicon.classList.add('far');
-  	newicon.classList.add('fa-hand-scissors');
-  	newicon.style.color='white';
-  	user.appendChild(newicon);
+	user.src='./scissor.jpg'
   	result();
 });	
 
@@ -81,31 +69,19 @@ function botbalaji()
 	{
 		botinput=document.querySelector('.fa-hand-rock');
 	    botweapon=document.querySelector('.fa-hand-paper');
-		let newicon=document.createElement('i');
-  		newicon.classList.add('far');
-  		newicon.classList.add('fa-hand-rock');
-  		newicon.style.color='white';
-  		bot.appendChild(newicon);
+  		bot.src='./rock.jpg'
 	}
 	else if(botchoosebutton===paperbutton)
 	{
 		botinput=document.querySelector('.fa-hand-paper');
 	    botweapon=document.querySelector('.fa-hand-scissors');
-		let newicon=document.createElement('i');
-  		newicon.classList.add('far');
-  		newicon.classList.add('fa-hand-paper');
-  		newicon.style.color='white';
-  		bot.appendChild(newicon);
+		bot.src='./paper.jpg'
 	}
 	else
 	{
 		botinput=document.querySelector('.fa-hand-scissors')
 		botweapon=document.querySelector('.fa-hand-rock');
-		let newicon=document.createElement('i');
-  		newicon.classList.add('far');
-  		newicon.classList.add('fa-hand-scissors');
-  		newicon.style.color='white';
-  		bot.appendChild(newicon);
+		bot.src='./scissor.jpg'
 	}
 }
  
@@ -118,18 +94,18 @@ function result()
 {
     if(userweapon===botinput)
 	{
-		userresult.innerHTML+='<h5>'+usersum+'</h5>';
-		botresult.innerHTML+='<h5>'+(++botsum)+'</h5>';
+		userresult.innerText=usersum;
+		botresult.innerText=++botsum;
 	}
 	else if(userinput===botweapon)
 	{
-		userresult.innerHTML+='<h5>'+(++usersum)+'</h5>';
-		botresult.innerHTML+='<h5>'+botsum+'</h5>';
+		userresult.innerText=++usersum;
+		botresult.innerText=botsum;
 	}
 	else
 	{
-		userresult.innerHTML+='<h5>'+usersum+'</h5>';
-		botresult.innerHTML+='<h5>'+botsum+'</h5>';
+		userresult.innerText=usersum;
+		botresult.innerText=botsum;
 	}
 }
 
